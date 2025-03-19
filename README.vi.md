@@ -4,28 +4,61 @@ Công cụ tự động cải thiện nội dung file phụ đề SRT hoặc VTT
 
 ## Cài đặt
 
-1. Cài đặt Python 3.7 trở lên
-2. Cài đặt python3-venv (cho Ubuntu/Debian):
+### Windows
+
+1. Cài đặt Python 3.7 trở lên từ [python.org](https://www.python.org/downloads/)
+   - Đảm bảo tích chọn "Add Python to PATH" trong quá trình cài đặt
+2. Mở Command Prompt (cmd) hoặc PowerShell
+3. Di chuyển đến thư mục dự án:
+```bash
+cd đường/dẫn/tới/Auto-improve-SRT-VTT
+```
+
+4. Tạo và kích hoạt môi trường ảo:
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+5. Cài đặt các thư viện cần thiết:
+```bash
+pip install -r requirements.txt
+```
+
+### Linux (Ubuntu/Debian)
+
+1. Cài đặt Python 3.7 trở lên:
+```bash
+sudo apt update
+sudo apt install python3 python3-pip
+```
+
+2. Cài đặt python3-venv:
 ```bash
 sudo apt install python3-venv
 ```
 
-3. Tạo và kích hoạt môi trường ảo:
+3. Mở terminal và di chuyển đến thư mục dự án:
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # Trên Linux/Mac
-# hoặc
-.\venv\Scripts\activate  # Trên Windows
+cd đường/dẫn/tới/Auto-improve-SRT-VTT
 ```
 
-4. Cài đặt các thư viện cần thiết:
+4. Tạo và kích hoạt môi trường ảo:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+5. Cài đặt các thư viện cần thiết:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Cách sử dụng
 
-1. Đảm bảo bạn đang ở trong môi trường ảo (bạn sẽ thấy `(venv)` ở đầu dòng lệnh)
+1. Đảm bảo bạn đang ở trong môi trường ảo:
+   - Windows: Bạn sẽ thấy `(venv)` ở đầu dòng lệnh
+   - Linux: Bạn sẽ thấy `(venv)` ở đầu dòng lệnh terminal
 
 2. Chạy chương trình với cú pháp:
 ```bash
@@ -58,6 +91,16 @@ Chương trình sẽ:
 - Có thể điều chỉnh ngưỡng tương đồng (mặc định: 50%)
 - Ngăn chặn việc sử dụng lyrics trùng lặp
 - Ưu tiên các cặp có độ tương đồng cao hơn
+
+## Xử lý sự cố
+
+### Windows
+- Nếu gặp lỗi "python is not recognized", hãy kiểm tra xem Python đã được thêm vào PATH chưa
+- Nếu gặp lỗi quyền truy cập, hãy thử chạy Command Prompt với quyền Administrator
+
+### Linux
+- Nếu gặp lỗi quyền truy cập, sử dụng `sudo` cho các lệnh cài đặt
+- Nếu gặp lỗi "command not found" cho python3, cài đặt nó bằng lệnh `sudo apt install python3`
 
 ## Xem thêm
 Để xem tài liệu tiếng Anh, vui lòng xem [README.md](README.md) 

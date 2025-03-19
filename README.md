@@ -4,28 +4,61 @@ A tool to automatically improve SRT or VTT subtitle files based on lyrics text f
 
 ## Installation
 
-1. Install Python 3.7 or higher
-2. Install python3-venv (for Ubuntu/Debian):
+### Windows
+
+1. Install Python 3.7 or higher from [python.org](https://www.python.org/downloads/)
+   - Make sure to check "Add Python to PATH" during installation
+2. Open Command Prompt (cmd) or PowerShell
+3. Navigate to the project directory:
+```bash
+cd path/to/Auto-improve-SRT-VTT
+```
+
+4. Create and activate virtual environment:
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+5. Install required libraries:
+```bash
+pip install -r requirements.txt
+```
+
+### Linux (Ubuntu/Debian)
+
+1. Install Python 3.7 or higher:
+```bash
+sudo apt update
+sudo apt install python3 python3-pip
+```
+
+2. Install python3-venv:
 ```bash
 sudo apt install python3-venv
 ```
 
-3. Create and activate virtual environment:
+3. Open terminal and navigate to the project directory:
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Linux/Mac
-# or
-.\venv\Scripts\activate  # On Windows
+cd path/to/Auto-improve-SRT-VTT
 ```
 
-4. Install required libraries:
+4. Create and activate virtual environment:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+5. Install required libraries:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Usage
 
-1. Make sure you're in the virtual environment (you should see `(venv)` at the start of your command prompt)
+1. Make sure you're in the virtual environment:
+   - Windows: You should see `(venv)` at the start of your command prompt
+   - Linux: You should see `(venv)` at the start of your terminal prompt
 
 2. Run the program with the following syntax:
 ```bash
@@ -58,6 +91,16 @@ The program will:
 - Configurable similarity threshold (default: 50%)
 - Prevents duplicate lyrics usage
 - Prioritizes matches with higher similarity
+
+## Troubleshooting
+
+### Windows
+- If you get "python is not recognized" error, make sure Python is added to PATH
+- If you get permission errors, try running Command Prompt as Administrator
+
+### Linux
+- If you get permission errors, use `sudo` for installation commands
+- If you get "command not found" for python3, install it using `sudo apt install python3`
 
 ## See also
 For Vietnamese documentation, please see [README.vi.md](README.vi.md) 
